@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_btn_control" />
+
+    <!-- Bottom Sheet Demo -->
+    <TextView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#F66"
+        app:behavior_hideable="true"
+        app:layout_behavior="@string/bottom_sheet_behavior" />
+
+
+    <!-- Drawer Sheet Demo -->
+    <LinearLayout
+        android:id="@+id/drawer_sheet"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="50dp"
+        app:layout_behavior="com.loosu.drawersheet.DrawerSheetBehavior">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="#6F6" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF6" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
